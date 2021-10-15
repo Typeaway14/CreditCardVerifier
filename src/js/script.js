@@ -85,3 +85,14 @@ function verify_number() {
 }
 
 console.log('check');
+function Aadharcheck() {
+  var aadhar = prompt("Enter your Aadhar number here!");
+  var aadharint = parseInt(aadhar);
+  localStorage.setItem('aadharnum',aadharint);
+  var aadharcheck = /^[2-9]{1}[0-9]{11}$/;
+  if(aadharcheck.test(localStorage.getItem('aadharnum'))){
+    alert("Aadhar Number is Valid!");
+  } else {
+    alert("Aadhar Number is invalid!");
+  }
+}
